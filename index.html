@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ClassTab. Навчання в одній вкладці</title>
+    <link rel="icon" href="./img/logo/logo.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="header-logo">
+                    <a href="./indexcopy.html" class="header-logo-link">
+                        <div class="header-logo-link-item">
+                            <img src="./img/logo/logo.svg" alt="logo" class="header-logo-image">
+                        </div>
+                    </a>
+                </div>
+                <div class="header-buttons">
+                    <button class="header-signin-button signin-button" id="signin-button">Увійти</button>
+                    <button class="header-signup-button signup-button" id="signup-button">Зареєструватись</button>
+                </div>
+                <div class="header-menu-button show-adaptive" id="header-menu-button">
+                    <svg fill="#000000" version="1.1" class="header-menu-button-svg" id="header-menu-button-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.75 24.75" xml:space="preserve">
+                        <g>
+                            <path d="M0,3.875c0-1.104,0.896-2,2-2h20.75c1.104,0,2,0.896,2,2s-0.896,2-2,2H2C0.896,5.875,0,4.979,0,3.875z M22.75,10.375H2
+                                c-1.104,0-2,0.896-2,2c0,1.104,0.896,2,2,2h20.75c1.104,0,2-0.896,2-2C24.75,11.271,23.855,10.375,22.75,10.375z M22.75,18.875H2
+                                c-1.104,0-2,0.896-2,2s0.896,2,2,2h20.75c1.104,0,2-0.896,2-2S23.855,18.875,22.75,18.875z"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="menu-modal">
+        <div id="menu-overlay"></div>
+        <div id="menu-modal-window">
+            <div>
+                <button id="menu-btn-close">Закрити</button>
+            </div>
+            <div class="content">
+                <h2 class="form-title">Що ви бажаєте?</h2>
+
+                <div class="menu-buttons">
+                    <button class="signin-button menu-buttons-item">Увійти</button>
+                    <div class="menu-buttons-caption">або</div>
+                    <button class="signup-button menu-buttons-item">Зареєструватись</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="signup-modal">
+        <div id="signup-overlay"></div>
+        <div id="signup-modal-window">
+            <div>
+                <button id="signup-btn-close">Закрити</button>
+            </div>
+            <div class="content">
+                <h2 class="form-title">Реєстрація</h2>
+
+                <form action="check.php" method="post">
+                    <input type="text" name="firstname" class="signup-input" id="firstname" placeholder="Ім'я" required>
+                    <input type="text" name="lastname" class="signup-input" id="lastname" placeholder="Прізвище"required >
+                    <input type="email" name="email" class="signup-input" id="email" placeholder="Email"required >
+                    <input type="text" name="username" class="signup-input" id="username" placeholder="Username" required>
+                    <input type="password" name="def-password" class="signup-input" id="def-password" placeholder="Наданий пароль" required>
+                    <input type="password" name="password" class="signup-input" id="password" placeholder="Новий пароль" required>
+
+                    <button id="signup-submit-button" type="submit">Зареєструватись</button>
+                </form>
+                <p class="already-have">Вже є акаунт? <span class="signin signin-button">Увійти</span></p>
+            </div>
+        </div>
+    </div>
+    <div id="signin-modal">
+        <div id="signin-overlay"></div>
+        <div id="signin-modal-window">
+            <div>
+                <button id="signin-btn-close">Закрити</button>
+            </div>
+            <div class="content">
+                <h2 class="form-title">Вхід</h2>
+
+                <form action="check.php" method="post">
+                    <input type="email" name="email" class="signin-input" id="signin-email" placeholder="Email"required>
+                    <input type="password" name="password" class="signin-input" id="signin-password" placeholder="Пароль" required>
+
+                    <button id="signin-submit-button" type="submit">Увійти</button>
+                </form>
+                <p class="not-yet-have">Ще нема акаунту? <span class="create signup-button">Створити</span></p>
+            </div>
+        </div>
+    </div>
+    <main class="main" id="main">
+        <div class="promo-section">
+            <div class="container">
+                <div class="promo-section-wrapper">
+                    <div class="promo-section-info">
+                        <h1 class="promo-section-title">ClassTab — <br>навчання в одній <br>вкладці</h1>
+                        <p class="promo-section-describe">Легкий та приємний спосіб навчатися онлайн. Зручний<br>інтерфейс та унікальні інструменти для ефективного<br>засвоєння матеріалу!</p>
+                        <button class="promo-section-button signup-button" id="try-button">Спробувати</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="functional-section">
+            <div class="container">
+                <div class="functional-section-wrapper">
+                    <div class="functional-section-title">
+                        <h2>Функціонал</h2>
+                    </div>
+                    <div class="functional-section-list">
+                        <div class="functional-section-list-item">
+                            <div class="functional-section-list-item-icon">
+                                <img src="./img/icons/subjects_icon.svg" alt="subjects icon" class="functional-section-list-item-icon-image">
+                            </div>
+                            <div class="functional-section-list-item-title">
+                                <h3>Предмети</h3>
+                            </div>
+                            <div class="functional-section-list-item-describe">
+                                <p>Всі предмети в одному місці. У майбутньому можна буде дивитись матеріали до уроку та здавати домашні завдання. Перша версія має тільки функціонал відеозаписів</p>
+                            </div>
+                        </div>
+                        <div class="functional-section-list-item">
+                            <div class="functional-section-list-item-icon">
+                                <img src="./img/icons/schedule_icon.svg" alt="schedule icon" class="functional-section-list-item-icon-image">
+                            </div>
+                            <div class="functional-section-list-item-title">
+                                <h3>Розклад</h3>
+                            </div>
+                            <div class="functional-section-list-item-describe">
+                                <p>Удосконалений і зручний розклад із посиланнями на онлайн зустрічі пар чи уроків. Цей розділ допомагає вчасно заходити на пари та не забувати про те, які предмети завтра</p>
+                            </div>
+                        </div>
+                        <div class="functional-section-list-item">
+                            <div class="functional-section-list-item-icon">
+                                <img src="./img/icons/video_icon.svg" alt="video icon" class="functional-section-list-item-icon-image">
+                            </div>
+                            <div class="functional-section-list-item-title">
+                                <h3>Відео</h3>
+                            </div>
+                            <div class="functional-section-list-item-describe">
+                                <p>Відеозаписи пар чи уроків. Можна легко передивитися матеріал, готуючись до контрольної чи самостійної роботи. Завжди легко заповнити прогалини в знаннях і повернутися назад</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mission-section">
+            <div class="container">
+                <div class="mission-section-wrapper">
+                    <div class="mission-section-block">
+                        <h3 class="mission-section-block-item">Наша місія</h3>
+                        <h1 class="mission-section-block-item mission-section-block-item-bigger">ПОКРАЩИТИ</h1>
+                        <h3 class="mission-section-block-item">Дистанційку</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="founders-section">
+            <div class="container">
+                <div class="founders-section-wrapper">
+                    <div class="founders-section-title">
+                        <h2>Розробники</h2>
+                    </div>
+                    <div class="founders-wrapper">
+                        <div class="founders-block">
+                            <div class="founders-block-picture">
+                                <img src="./img/developers/vsevolod.png" alt="founder image" class="founders-block-picture-image">
+                            </div>
+                            <div class="founders-block-info">
+                                <div class="founders-block-info-title">
+                                    <h3>Всеволод Журавльов</h3>
+                                </div>
+                                <div class="founders-block-info-about">
+                                    <p>Frontend розробник. Адмін HRTFK Community</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="founders-block">
+                            <div class="founders-block-picture">
+                                <img src="./img/developers/denis.png" alt="founder image" class="founders-block-picture-image">
+                            </div>
+                            <div class="founders-block-info">
+                                <div class="founders-block-info-title">
+                                    <h3>Денис Сокіл</h3>
+                                </div>
+                                <div class="founders-block-info-about">
+                                    <p>Backend розробник. Автор ідеї</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <ul class="footer-list">
+                    <li class="footer-list-item">Зв'язок: <a href="mailto:classtab.com.ua@gmail.com" class="footer-list-item-link">classtab.com.ua@gmail.com</a></li>
+                    <li class="footer-list-item">ClassTab. 2024</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="./JS/script.js"></script>
+</body>
+</html>
